@@ -10,8 +10,22 @@
   "keywords": [
     "react-native"
   ],
-  "author": "",
+  "author": {
+    "name": "Hesam Ebrahimy",
+    "email": "hesam.ebrahimy@gmail.com"
+  },
+  "description": "Customizable InAppBilling feature for react native application",
   "license": "",
+  "keywords": [
+    "react-native",
+    "billing",
+    "iap",
+    "cafe",
+    "bazaar",
+    "myket",
+    "persian",
+    "market"
+  ],
   "peerDependencies": {
     "react-native": "^0.41.2"
   }
