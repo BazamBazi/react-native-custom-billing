@@ -1,21 +1,11 @@
-
 {
   "name": "react-native-custom-billing",
   "version": "1.0.0",
-  "description": "",
+  "description": "Customizable InAppBilling feature for react native application",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "react-native"
-  ],
-  "author": {
-    "name": "Hesam Ebrahimy",
-    "email": "hesam.ebrahimy@gmail.com"
-  },
-  "description": "Customizable InAppBilling feature for react native application",
-  "license": "",
   "keywords": [
     "react-native",
     "billing",
@@ -26,6 +16,11 @@
     "persian",
     "market"
   ],
+  "author": {
+    "name": "Hesam Ebrahimy",
+    "email": "hesam.ebrahimy@gmail.com"
+  },
+  "license": "",
   "peerDependencies": {
     "react-native": "^0.41.2"
   }

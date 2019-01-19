@@ -42,6 +42,8 @@ public class RNCustomBillingModule extends ReactContextBaseJavaModule implements
 
     private final ReactApplicationContext _reactContext;
     private String LICENSE_KEY = null;
+    private String VENDOR_INTENT = null;
+    private String VENDOR_PACKAGE = null;
     private IabHelper mHelper;
     private final Gson gson = new Gson();
     private static final String E_SETUP_ERROR = "E_SETUP_ERROR";
@@ -56,22 +58,28 @@ public class RNCustomBillingModule extends ReactContextBaseJavaModule implements
     private static final String E_CONSUME_ERROR = "E_CONSUME_ERROR";
     private static final String E_CONSUME_INITIAL = "E_CONSUME_INITIAL";
     private final String TAG;
-    private final String VENDOR_INTENT;
-    private final String VENDOR_PACKAGE;
     private Inventory userInvo;
 
-    public RNCustomBillingModule(ReactApplicationContext reactContext, String vendor, String licenseKey,
-    String vendorIntent, String vendorPackage) {
+    public RNCustomBillingModule(ReactApplicationContext reactContext) {
         super(reactContext);
         _reactContext = reactContext;
-        TAG = vendor;
+
+        int vendorResourceId = _reactContext
+                .getResources()
+                .getIdentifier("RNCB_VENDOR_NAME", "string", _reactContext.getPackageName());
+        TAG = _reactContext.getString(vendorResourceId);
+
+        int keyResourceId = _reactContext
+                .getResources()
+                .getIdentifier("RNCB_VENDOR_PUBLIC_KEY", "string", _reactContext.getPackageName());
+        this.LICENSE_KEY = _reactContext.getString(keyResourceId);
         
-        switch (vendor) {
+        switch (TAG) {
             case "google":
                 VENDOR_INTENT = "com.android.vending.billing.InAppBillingService.BIND";
                 VENDOR_PACKAGE = "com.android.vending";
                 break;
-            case "cafeBazaar":
+            case "bazaar":
                 VENDOR_INTENT = "ir.cafebazaar.pardakht.InAppBillingService.BIND";
                 VENDOR_PACKAGE = "com.farsitel.bazaar";
                 break;
@@ -80,11 +88,8 @@ public class RNCustomBillingModule extends ReactContextBaseJavaModule implements
                 VENDOR_PACKAGE = "ir.mservices.market";
                 break;
             default:
-                VENDOR_INTENT = vendorIntent;
-                VENDOR_PACKAGE = vendorPackage;
                 break;
         }
-        this.LICENSE_KEY = licenseKey;
 
         reactContext.addActivityEventListener(this);
     }
