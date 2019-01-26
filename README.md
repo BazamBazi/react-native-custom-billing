@@ -36,7 +36,7 @@ InApp Billing for CafeBazaar/Myket/Google (Android)
 ```xml
 <string name="RNCB_VENDOR_PUBLIC_KEY">YOUR_VENDOR_PUBLIC_KEY_HERE</string>
 ```
-6. Add the billing permission as follows to AndroidManifest.xml file Related to your Vendor (CafeBazaar/Myket/Google):
+6. Add the billing permission as follows to AndroidManifest.xml file based on your Vendor (CafeBazaar/Myket/Google):
 ```xml
 Cafe Bazaar: <uses-permission android:name="com.farsitel.bazaar.permission.PAY_THROUGH_BAZAAR"></uses-permission>
 Myket: <uses-permission android:name="ir.mservices.market.BILLING"></uses-permission>
