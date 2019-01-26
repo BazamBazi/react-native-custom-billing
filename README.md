@@ -28,7 +28,11 @@ InApp Billing for CafeBazaar/Myket/Google (Android)
   	```
       compile project(':react-native-custom-billing')
 
-5. Add your Vendor(CafeBazaar/Myket/Google) Public key as a line to your `android/app/src/main/res/values/strings.xml` with the name `RNCB_VENDOR_PUBLIC_KEY`. For example:
+4. Add your Vendor Name (CafeBazaar/Myket/Google) as a line to your `android/app/src/main/res/values/strings.xml` with the name `RNCB_VENDOR_NAME`. For example:
+```xml
+<string name="RNCB_VENDOR_NAME">google/bazaar/myket</string>
+
+5. Add your Vendor Public key as a line to your `android/app/src/main/res/values/strings.xml` with the name `RNCB_VENDOR_PUBLIC_KEY`. For example:
 ```xml
 <string name="RNCB_VENDOR_PUBLIC_KEY">YOUR_VENDOR_PUBLIC_KEY_HERE</string>
 ```
