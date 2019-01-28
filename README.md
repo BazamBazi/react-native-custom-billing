@@ -16,7 +16,7 @@ InApp Billing for CafeBazaar/Myket/Google (Android)
 
 #### Android
 
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
+1. Open up `android/app/src/main/java/[...]/MainApplication.java`
   - Add `import com.customBilling.reactnative.RNCustomBillingPackage;` to the imports at the top of the file
   - Add `new RNCustomBillingPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
@@ -30,16 +30,26 @@ InApp Billing for CafeBazaar/Myket/Google (Android)
     ```
 4. Add your Vendor Name (CafeBazaar/Myket/Google) as a line to your `android/app/src/main/res/values/strings.xml` with the name `RNCB_VENDOR_NAME`. For example:
 ```xml
-<string name="RNCB_VENDOR_NAME">google/bazaar/myket</string>
+<string name="RNCB_VENDOR_NAME">bazaar</string>
+or
+<string name="RNCB_VENDOR_NAME">myket</string>
+or
+<string name="RNCB_VENDOR_NAME">google</string>
 ```
 5. Add your Vendor Public key as a line to your `android/app/src/main/res/values/strings.xml` with the name `RNCB_VENDOR_PUBLIC_KEY`. For example:
 ```xml
-<string name="RNCB_VENDOR_PUBLIC_KEY">YOUR_VENDOR_PUBLIC_KEY_HERE</string>
+<string name="RNCB_VENDOR_PUBLIC_KEY">YOUR_CAFE_BAZAAR_PUBLIC_KEY</string>
+or
+<string name="RNCB_VENDOR_PUBLIC_KEY">YOUR_MYKET_PUBLIC_KEY</string>
+or
+<string name="RNCB_VENDOR_PUBLIC_KEY">YOUR_GOOGLE_PUBLIC_KEY</string>
 ```
 6. Add the billing permission as follows to AndroidManifest.xml file based on your Vendor (CafeBazaar/Myket/Google):
 ```xml
 Cafe Bazaar: <uses-permission android:name="com.farsitel.bazaar.permission.PAY_THROUGH_BAZAAR"></uses-permission>
+or
 Myket: <uses-permission android:name="ir.mservices.market.BILLING"></uses-permission>
+or
 Google: <uses-permission android:name="com.android.vending.BILLING"></uses-permission>
 ```
 
