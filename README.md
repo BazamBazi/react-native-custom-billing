@@ -1,6 +1,6 @@
-InApp Billing for CafeBazaar/Myket/Google (Android)
+InApp Billing for CafeBazaar/Myket/IranApps/Google (Android)
 =============
-**React Native Custom Billing** is built to provide an easy interface to InApp Billing for **CafeBazaar/Myket/Google (Android)**,
+**React Native Custom Billing** is built to provide an easy interface to InApp Billing for **CafeBazaar/Myket/IranApps/Google (Android)**,
 
 
 ## Getting started
@@ -28,19 +28,23 @@ InApp Billing for CafeBazaar/Myket/Google (Android)
   	```
       compile project(':react-native-custom-billing')
     ```
-4. Add your Vendor Name (CafeBazaar/Myket/Google) as a line to your `android/app/src/main/res/values/strings.xml` with the name `RNCB_VENDOR_NAME`. For example:
+4. Add your Vendor Name (CafeBazaar/Myket/IranApps/Google) as a line to your `android/app/src/main/res/values/strings.xml` with the name `RNCB_VENDOR_NAME`. For example:
 ```xml
 <string name="RNCB_VENDOR_NAME">bazaar</string>
 or
 <string name="RNCB_VENDOR_NAME">myket</string>
 or
 <string name="RNCB_VENDOR_NAME">google</string>
+or
+<string name="RNCB_VENDOR_NAME">iranapps</string>
 ```
 5. Add your Vendor Public key as a line to your `android/app/src/main/res/values/strings.xml` with the name `RNCB_VENDOR_PUBLIC_KEY`. For example:
 ```xml
 <string name="RNCB_VENDOR_PUBLIC_KEY">YOUR_CAFE_BAZAAR_PUBLIC_KEY</string>
 or
 <string name="RNCB_VENDOR_PUBLIC_KEY">YOUR_MYKET_PUBLIC_KEY</string>
+or
+<string name="RNCB_VENDOR_PUBLIC_KEY">YOUR_IRAN_APPS_PUBLIC_KEY</string>
 or
 <string name="RNCB_VENDOR_PUBLIC_KEY">YOUR_GOOGLE_PUBLIC_KEY</string>
 ```
@@ -49,6 +53,8 @@ or
 Cafe Bazaar: <uses-permission android:name="com.farsitel.bazaar.permission.PAY_THROUGH_BAZAAR"></uses-permission>
 or
 Myket: <uses-permission android:name="ir.mservices.market.BILLING"></uses-permission>
+or
+Iran Apps: <uses-permission android:name="ir.tgbs.iranapps.permission.BILLING"/>
 or
 Google: <uses-permission android:name="com.android.vending.BILLING"></uses-permission>
 ```
