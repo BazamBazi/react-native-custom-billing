@@ -7,11 +7,11 @@ InApp Billing for CafeBazaar/Myket/IranApps/Google (Android)
 
 `$ npm install react-native-custom-billing --save`
 
-### Mostly automatic installation
+### Mostly automatic installation (for React Native <= 0.59 only, React Native >= 0.60 skip this as auto-linking should work)
 
 `$ react-native link react-native-custom-billing`
 
-### Manual installation
+### Manual installation (Skip step 1,2,3 for React Native >= 0.60)
 
 
 #### Android
