@@ -1,25 +1,85 @@
+# --------------------------------------- File system
+*.swp
 
-# OSX
+# --------------------------------------- OSX
 #
 .DS_Store
 
-# node.js
-#
-node_modules/
-npm-debug.log
-yarn-error.log
-  
-
-# Android/IntelliJ
+# --------------------------------------- Xcode
 #
 build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+ios/TapsellSDKv3.framework
+# ---------------------------------------- ios/Pods
+ios/Pods/
+ios/Podfile.lock
+
+# --------------------------------------- Android/IntelliJ
+#
+android/app/src/main/assets/index.android.bundle
+android/app/src/main/assets/index.android.bundle.js
+android/app/src/main/assets/index.android.bundle.meta
+android/app/src/main/assets/index.android.bundle.js.meta
+build/
+.project
+org.eclipse.*
+.classpath
 .idea
 .gradle
 local.properties
 *.iml
 
-# BUCK
+# --------------------------------------- node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+*.swp
+
+# --------------------------------------- react native
+#
+react-native-packager-cache-*/
+haste-map-react-native-packager-*
+metro-bundler-symbolicate*
+
+# --------------------------------------- BUCK
 buck-out/
 \.buckd/
+android/app/libs
 *.keystore
-      
+
+# --------------------------------------- fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+# Bundle artifact
+*.jsbundle
+# --------------------------------------- Test
+#
+coverage/*
+jest/*
+
+# react-native-config codegen
+ios/tmp.xcconfig
